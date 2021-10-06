@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CGPA CALCULATOR BY EM</title>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <style>
+  
+body {
+  background:#33d9b2;
+  font-size: 12px;
+}
+
+body, button, input {
+  font-family: 'Righteous', cursive;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background:#3E3E3E;
+  border-radius: 9px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.app-title {
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  color: #33d9b2;f;
+  font-size: 26px;
+  text-transform: uppercase;
+  border-left: 4px solid #218c74;
+  padding: 10px;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #F51818;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #FFF;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #33d9b2;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.app-form-button:hover {
+  color: #218c74;
+}
+
+.showdata{
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  padding-top: -10px;
+  padding-bottom: 10px;
+}
+
+
+nav
+{
+	background: #0082e6;
+	height: 70px;
+	width: 100%
+}
+.logo{
+font-family: TimesNewRoman;
+	color: white;
+	font-size:25px;
+	line-height: 80px;
+	padding: 10 100px;
+	font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+<nav>
+    <h3 class="logo">ENGINEERINGMATERIALS STUDENT CGPA CALCULATOR [AS PER JNTUA]</h3>
+   </nav></br></br>
+<fieldset style="width:1050px">
+<legend><b>Student Input Section:</b></legend>
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <div class="animated infinite pulse">
+              Student <br> Grade <br> Calcy
+            </div>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+		  <table border="1">
+		  <tr>
+    <th>SUBJECT NAME</th>
+    <th>SUBJECT GRADE POINT</th>
+    <th>SUBJECT CREDITS</th>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 1</b></p></td>
+    <td> <input  type="text" placeholder="Enter Grade Point Here" id="s1g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s1c" value="0"></td>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 2</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s2g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s2c" value="0"></td>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 3</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s3g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s3c" value="0"></td>
+  </tr>
+  
+  <tr>
+    <td><p><b>SUBJECT 4</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s4g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s4c" value="0"></td>
+  </tr>
+  
+  <tr>
+    <td><p><b>SUBJECT 5</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s5g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s5c" value="0"></td>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 6</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s6g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s6c" value="0"></td>
+  </tr>
+  
+  <tr>
+    <td><p><b>SUBJECT 7</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s7g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s7c" value="0"></td>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 8</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s8g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s8c" value="0"></td>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 9</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s9g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s9c" value="0"></td>
+  </tr>
+  <tr>
+    <td><p><b>SUBJECT 10</b></p></td>
+    <td><input  type="text" placeholder="Enter Grade Point Here" id="s10g" value="0"></td>
+    <td> <input type="text" placeholder="Enter Credits" id="s10c" value="0"></td>
+  </tr>
+  <tr>
+  <td><h3> ENTER TOTAL CREDITS OF WHOLE SEMESTER</h3></td>
+  <td><input  type="text" placeholder="Enter Credits" id="sc" value="0"></td></tr>
+  </br></br>
+  <tr>
+            <div > 
+              <td><input type="button" name="" value="showPercentage" class="app-form-button" onclick="calcy()"></td>
+            </div>            
+     </div>
+     </div>
+    </div>
+	</table>
+      <div class="app-form-group showdata">
+              <p id="showData" >  </p>
+     </div>
+  </div>
+</div>
+</fieldset>
+<br></br>
+<fieldset style="width:1050px">
+<h1> <font size="5" color="red">
+     <table border="1">
+   
+			  <tr> <td> Grade </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> Grade Point</td></tr>
+			  <tr> <td> S </td><td></td><td></td><td></td><td></td><td></td><td></td> <td> 10</td></tr>
+			  <tr> <td> A </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> 09</td></tr>
+			  <tr> <td> B </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> 08</td></tr>
+			  <tr> <td> C </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> 07</td></tr>
+			  <tr> <td> D </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> 06</td></tr>
+			  <tr> <td> E </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> 05</td></tr>
+			  <tr> <td> F </td><td></td><td></td><td></td><td></td><td></td> <td></td><td> 0</td></tr>
+			  </table>
+			  </font></h1>
+			  </fieldset>
+<nav>
+    <h3 class="logo"><marquee>ENGINEERINGMATERIALS CGPA CALCULATOR [AS PER JNTUA]</marquee></h3>
+   </nav>
+<script>
+  
+const calcy = () =>{
+  let s1g = document.getElementById('s1g').value;
+  let s1c = document.getElementById('s1c').value;
+  let s2g = document.getElementById('s2g').value;
+  let s2c = document.getElementById('s2c').value;
+  let s3g = document.getElementById('s3g').value;
+  let s3c = document.getElementById('s3c').value;
+  let s4g = document.getElementById('s4g').value;
+  let s4c = document.getElementById('s4c').value;
+  let s5c = document.getElementById('s5c').value;
+  let s5g = document.getElementById('s5g').value;
+  let s6g = document.getElementById('s6g').value;
+  let s6c = document.getElementById('s6c').value;
+  let s7g = document.getElementById('s7g').value;
+ let s7c = document.getElementById('s7c').value;
+let s8c = document.getElementById('s8c').value;
+ let s8g = document.getElementById('s8g').value;
+ let s9c = document.getElementById('s9c').value;
+ let s9g = document.getElementById('s9g').value;
+let s10c = document.getElementById('s10c').value;
+ let s10g = document.getElementById('s10g').value;
+let sc=document.getElementById('sc').value;
+  let grades = "";
+  var s1 = s1c * s1g;
+  var s2 = s2c * s2g;
+  var s3 = s3c * s3g;
+  var s4 = s4c * s4g;
+  var s5 = s5c * s5g;
+  var s6 = s6c * s6g;
+  var s7 = s7c * s7g;
+  var s8 = s8c * s8g;
+  var s9 = s9c * s9g;
+  var s10 = s10c * s10g;
+
+ let totalGrades= s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10;
+ totalGrades=totalGrades/parseFloat(sc);
+ totalGrades=totalGrades.toFixed(2)
+  alert(totalGrades);
+  let perc = (totalGrades/10) * 100;
+  alert(perc);
+
+  debugger;
+
+  
+    document.getElementById('showData').innerHTML = ` Deat Student your total Poins is  ${totalGrades} and  <br> percentage is ${perc}%. `
+  
+
+  
+}
+
+
+
+
+</script>
+
+</body>
+</html>
