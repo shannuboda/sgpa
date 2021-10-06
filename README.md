@@ -307,7 +307,7 @@ let sc=document.getElementById('sc').value;
   debugger;
 
   
-    document.getElementById('showData').innerHTML = ` Deat Student your total Poins is  ${totalGrades} and  <br> percentage is ${perc}%. `
+    document.getElementById('showData').innerHTML = ` Dear Student your total Points is  ${totalGrades} and  <br> percentage is ${perc}%. `
   
 
   
